@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Mi Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#ffe6f0, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: #333;
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .heart {
+      position: absolute;
+      top: -10px;
+      font-size: 2em;
+      color: red;
+      animation: float 10s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #d63384;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para la mejor mujer del mundo mundial</h1>
+    <img src="foto.jpg" alt="Nosotros" />
+    <p>Mi amor, eres mi alegría, mi fuerza y mi todo. Gracias por existir y por hacerme el hombre más feliz del planeta.<br><br><strong>Te amo con todo mi corazón.</strong></p>
+    <a class="button" href="https://www.youtube.com/watch?v=jhMiIUb2GEA" target="_blank">Escuchar "Primera Cita"</a>
+  </div>
+
+  <!-- Corazones flotantes -->
+  <script>
+    const colors = ['❤️', '💖', '💘', '💕'];
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      heart.textContent = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
